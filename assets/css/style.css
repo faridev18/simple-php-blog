@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+nav{
+    border-bottom: 2px solid #7C4EE4;
+}
+
+nav .nav {
+    display: flex;
+    max-width: 1300px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
+}
+
+nav .navlinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+nav .navlinks a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+nav .navlinks button {
+    border: none;
+    background-color: #7C4EE4;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* header */
+
+
+header {
+    /* height: 100vh; */
+    background-color: #7C4EE4;
+    padding: 100px 0px;
+}
+
+header .header {
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    gap: 20px;
+    align-items: center;
+}
+
+header .header .left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.left h3 {
+    color: white;
+}
+
+.left h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.left p {
+    color: white;
+    font-size: 20px;
+}
+
+.left button {
+    width: fit-content;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.right {
+    width: 100%;
+
+}
+
+/* Grid */
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 100px 5px;
+}
+
+.article_image {
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.article_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.article_info {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+.article {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.article a {
+    color: #7C4EE4;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+.article .category {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.date {
+    font-size: 0.8em;
+    color: #999;
+}
+
+
+
+
+/* Style du formulaire */
+
+.pages{
+    padding: 20px;
+}
+.pages form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.pages form div {
+    margin-bottom: 1.5rem;
+}
+
+.pages form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.pages form input[type="text"],
+.pages form input[type="file"],
+.pages form textarea,
+.pages form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.pages form input[type="text"]:focus,
+.pages form input[type="file"]:focus,
+.pages form textarea:focus,
+.pages form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.pages form textarea {
+    resize: vertical;
+}
+
+.pages form button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pages form button[type="submit"]:hover {
+    background-color: #0056b3;
+}

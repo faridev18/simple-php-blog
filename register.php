@@ -18,6 +18,11 @@ require 'actions/registerAction.php';
 </head>
 <body>
     <form action="" method='POST'>
+    <a href="index.php">
+        <img src="assets/img/Logo.png" alt="">
+        </a>
+        <br>
+
         <h1>Inscription</h1>
     <br>
 

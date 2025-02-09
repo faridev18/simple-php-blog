@@ -1,30 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
 <nav>
+        <div class="nav">
+            <img src="assets/img/Logo.png" alt="">
 
-<div>
-  <h1>Logo</h1>
-</div>
-<div>
+            <div class="navlinks">
+            <a href="index.php">Accueil</a>   
+            <a href="">Blog</a>
 
+                <?php
+                  if (isset($_SESSION['auth'])) {
+                  ?>
+                  <a href="add-article.php">Ajouter un article</a>
+                  <a href="actions/deconnexion.php">Se deconnecter</a>
 
+                <?php
+                    } else {
+                    ?>
+                  <a href="register.php">S'inscrire</a>
+                  <a href="login.php">
+                    <button>Se connecter</button>
+                  </a>
 
-  <?php 
-    if (isset($_SESSION['auth'])) {
-    ?>
-  <a href="add-article.php">Ajouter un article</a>
-  <a href="actions/deconnexion.php">Se deconnecter</a>
+                <?php
+                    }
+                ?>
+            </div>
+        </div>
 
-    <?php 
-    }else{
-    ?>
+    </nav>
 
-    <a href="login.php">Se connecter</a>
-  <a href="register.php">S'inscrire</a>
-
-    <?php 
-    }
-    ?>
-
-
-</div>
-
-</nav>
