@@ -21,6 +21,7 @@
                   if (isset($_SESSION['auth'])) {
                   ?>
                   <a href="add-article.php">Ajouter un article</a>
+                  <a href="gestion-article.php">Gérer les articles</a>
                   <a href="actions/deconnexion.php">Se deconnecter</a>
 
                 <?php

@@ -1,13 +1,14 @@
 <?php
     session_start();
 
-    require 'actions/saveArticleAction.php';
+    require 'actions/getArticleAction.php';
+    require 'actions/updateArticleAction.php';
 
 ?>
     <?php include 'include/nav.php'; ?>
 
    <div class="pages">
-   <h1>Ajouter un article</h1>
+   <h1>Modifier cet article</h1>
 
 <form action="" method="POST" enctype="multipart/form-data">
     
@@ -32,19 +33,25 @@
     <!-- Champ Titre -->
     <div>
         <label for="title">Titre :</label>
-        <input type="text" id="title" name="title" >
+        <input type="text" id="title" name="title" value="<?=$article["title"] ?>" >
     </div>
 
     <!-- Champ Image -->
     <div>
         <label for="image">Image :</label>
+        
         <input type="file" id="image" name="image" >
+
+        <div>
+            <h5>Image actuelle</h5>
+            <img height="100px" src="image_article/<?= $article['image']?>" alt="">
+        </div>
     </div>
 
     <!-- Champ Contenu -->
     <div>
         <label for="content">Contenu :</label>
-        <textarea id="content" name="content" rows="10" ></textarea>
+        <textarea id="content" name="content" rows="10" ><?=$article["content"] ?></textarea>
     </div>
 
     <!-- Champ Catégorie -->
@@ -60,7 +67,7 @@
     </div>
 
     <!-- Bouton de soumission -->
-    <button type="submit" name="upload" >Publier l'article</button>
+    <button type="submit" name="upload" >Mettre à jour l'article</button>
 </form>
    </div>
 

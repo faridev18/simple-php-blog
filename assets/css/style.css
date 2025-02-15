@@ -104,6 +104,15 @@ header .header .left {
     padding: 100px 5px;
 }
 
+.article {
+    background: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
 .article_image {
     height: 300px;
     overflow: hidden;
@@ -112,6 +121,7 @@ header .header .left {
     align-items: center;
     border-radius: 10px;
 }
+
 
 .article_image img {
     object-fit: cover;
@@ -125,12 +135,6 @@ header .header .left {
     margin: 10px 0px;
 }
 
-.article {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 .article h2 {
     margin-top: 0;
@@ -230,4 +234,64 @@ header .header .left {
 
 .pages form button[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table caption {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    color: #555;
+}
+
+.delete_button{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.edit_button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    text-decoration: none;
 }

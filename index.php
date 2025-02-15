@@ -1,10 +1,12 @@
-<?php 
-	session_start();
+<?php
+    session_start();
+
+    require 'actions/getAllArticleAction.php';
 ?>
 
-<?php include 'include/nav.php' ?>
+<?php include 'include/nav.php'?>
 
-  
+
 <header>
         <div class="header">
             <div class="left">
@@ -26,114 +28,34 @@
     </header>
     <section>
         <div class="grid-container">
-            <div class="article">
-                <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
-                </div>
-                <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
-                </div>
 
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
-                <a href="#">Read More...</a>
-            </div>
+
+
+<?php
+    while ($article = $getAllArticle->fetch()) {
+    ?>
 
             <div class="article">
                 <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
+                    <img src="image_article/<?= $article['image']?>" alt="">
                 </div>
                 <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
+                    <div class="category"><?= $article['categorie']?></div>
+                    <div class="date"><?= $article['created_at']?></div>
                 </div>
 
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
+                <h2><?= $article['title']?> </h2>
+                <p><?=substr($article['content'], 0, 100) ?>... </p>
                 <a href="#">Read More...</a>
             </div>
 
-            <div class="article">
-                <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
-                </div>
-                <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
-                </div>
+            <?php
+                }
+            ?>
 
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
-                <a href="#">Read More...</a>
-            </div>
 
-            
-            <div class="article">
-                <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
-                </div>
-                <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
-                </div>
 
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
-                <a href="#">Read More...</a>
-            </div>
 
-            
-            <div class="article">
-                <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
-                </div>
-                <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
-                </div>
-
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
-                <a href="#">Read More...</a>
-            </div>
-
-            
-            <div class="article">
-                <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
-                </div>
-                <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
-                </div>
-
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
-                <a href="#">Read More...</a>
-            </div>
-
-            
-            <div class="article">
-                <div class="article_image">
-                    <img src="assets/img/Container.png" alt="">
-                </div>
-                <div class="article_info">
-                    <div class="category">Travel</div>
-                    <div class="date">13 March 2023</div>
-                </div>
-
-                <h2>8 Rules Of Travelling in Sea You Need To Know</h2>
-                <p>Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include:
-                    you can ship large volumes at costs...</p>
-                <a href="#">Read More...</a>
-            </div>
 
 
         </div>
@@ -141,4 +63,4 @@
 
 
     </section>
-<?php include 'include/footer.php' ?>
+<?php include 'include/footer.php'?>
