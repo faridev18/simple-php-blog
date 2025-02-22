@@ -94,10 +94,14 @@ header .header .left {
 /* Grid */
 
 
+.section_title{
+    text-align: center;
+    margin-top: 100px;
+}
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     gap: 20px;
     max-width: 1300px;
     margin: auto;
@@ -106,7 +110,7 @@ header .header .left {
 
 .article {
     background: #fff;
-    width: 400px;
+    width: 370px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -294,4 +298,11 @@ table td {
     padding: 10px 15px;
     border-radius: 15px;
     text-decoration: none;
+}
+
+
+.content{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
 }

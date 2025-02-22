@@ -15,7 +15,7 @@
 
             <div class="navlinks">
             <a href="index.php">Accueil</a>   
-            <a href="">Blog</a>
+            <a href="blog.php">Blog</a>
 
                 <?php
                   if (isset($_SESSION['auth'])) {

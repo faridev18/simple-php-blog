@@ -7,26 +7,9 @@
 <?php include 'include/nav.php'?>
 
 
-<header>
-        <div class="header">
-            <div class="left">
-                <h3>Featured Post</h3>
-                <h1>How AI will Change the Future</h1>
-                <p>
-                    The future of AI will see home robots having enhanced intelligence, increased capabilities, and
-                    becoming more personal and possibly cute. For example, home robots will overcome navigation,
-                    direction
-                </p>
-                <button>
-                    Read More
-                </button>
-            </div>
-            <div class="right">
-                <img src="assets/img/Container.png" alt="">
-            </div>
-        </div>
-    </header>
+
     <section>
+        <h1 class="section_title">Tous les articles</h1>
         <div class="grid-container">
 
 
@@ -47,7 +30,6 @@
                 <h2><?= $article['title']?> </h2>
                 <p><?=substr($article['content'], 0, 100) ?>... </p>
                 <a href="article.php?id=<?= $article['id']?> ">Read More...</a>
-
             </div>
 
             <?php
